@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import Home from './Home';
 import About from './About';
+import Category from "./category/Index";
 
 function Header() {
     return (
@@ -11,7 +12,7 @@ function Header() {
             <div>
                
 
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -25,6 +26,9 @@ function Header() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/about">About</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/category">Category</Link>
+                            </li>
                         </ul>
                         <form className="form-inline my-2 my-lg-0">
                             <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
@@ -35,7 +39,7 @@ function Header() {
 
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
-
+                <Route exact path="/category" component={Category} />
 
 
 
