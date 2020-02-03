@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-function Add() {
-    return (
-        <div>
-            <form>
+export default class Add extends Component {
 
-                <div class="form-group">
-                    <label for="txtName">Category name</label>
-                    <input type="text" class="form-control" id="txtName" name="name" placeholder="Enter category name" />
-                    <small id="txtNameHelp" class="form-text text-muted"></small>
-                </div>
-               
-               
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    );
+    constructor(){
+        super();
+        this.state={
+           category_name:'',     
+        };
+    }
+
+    
+
+    render() {
+        return (
+            <div>
+                <form>
+                    <div className="form-group">
+                        <label>Category name</label>
+                        <input type="text" className="form-control" id="txtName" name="name" placeholder="Enter category name" />
+                        <small id="txtNameHelp" className="form-text text-muted"></small>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        );
+    }
+
 }
 
-export default Add;
 
 
